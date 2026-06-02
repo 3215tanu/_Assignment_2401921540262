@@ -1,0 +1,16 @@
+class Solution {
+public:
+    bool containsDuplicate(vector<int>& nums) {
+        unordered_set<int>cd;
+        
+        for(int i = 0;i< nums.size();i++)
+        {
+            if(cd.count(nums[i]))
+                {
+                    return true;
+                }
+            cd.insert( nums[i]);
+        }
+        return false;
+    }
+};
